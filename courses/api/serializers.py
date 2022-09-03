@@ -20,6 +20,6 @@ class CourseSerializers(serializers.ModelSerializer):
     modules = ModuleSrializers(many=True, read_only=True)
 
     class Meta:
-        models = Course
+        model = Course
         fields = ['id', 'subject', 'title', 'slug', 'overview',
                   'created', 'owner', 'modules']
