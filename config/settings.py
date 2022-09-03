@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     #third-party
     'embed_video',
     'memcache_status',
+    'rest_framework',
 
     # local
     'courses.apps.CoursesConfig',
@@ -150,4 +151,11 @@ CACHES = {
     'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
     'LOCATION': '127.0.0.1:11211',
     }
+}
+
+# rest framework config
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
 }
